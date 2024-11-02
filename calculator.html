@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="calculator">
+      <div id="display" class="display">0</div>
+      <div class="buttons">
+        <!-- Row 1: Clear and Operations -->
+        <button class="btn btn-danger" onclick="clearDisplay()">AC</button>
+        <button class="btn btn-secondary" onclick="appendOperator('%')">%</button>
+        <button class="btn btn-secondary" onclick="appendOperator('/')">/</button>
+        <button class="btn btn-secondary" onclick="appendOperator('*')">*</button>
+
+        <!-- Row 2: Square Function and Numbers -->
+        <button class="btn btn-secondary" onclick="calculateSquare()">x²</button>
+        <button class="btn btn-light" onclick="appendNumber(7)">7</button>
+        <button class="btn btn-light" onclick="appendNumber(8)">8</button>
+        <button class="btn btn-light" onclick="appendNumber(9)">9</button>
+        
+        <!-- Row 3: Numbers and Operators -->
+        <button class="btn btn-light" onclick="appendNumber(4)">4</button>
+        <button class="btn btn-light" onclick="appendNumber(5)">5</button>
+        <button class="btn btn-light" onclick="appendNumber(6)">6</button>
+        <button class="btn btn-secondary" onclick="appendOperator('-')">-</button>
+
+        <!-- Row 4: Numbers and Operators -->
+        <button class="btn btn-light" onclick="appendNumber(1)">1</button>
+        <button class="btn btn-light" onclick="appendNumber(2)">2</button>
+        <button class="btn btn-light" onclick="appendNumber(3)">3</button>
+        <button class="btn btn-secondary" onclick="appendOperator('+')">+</button>
+
+        <!-- Row 5: Decimal, Zero, Equals -->
+        <button class="btn btn-light" onclick="appendNumber(0)">0</button>
+        <button class="btn btn-light" onclick="appendOperator('.')">.</button>
+        <button class="btn btn-success" onclick="calculateResult()">=</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
